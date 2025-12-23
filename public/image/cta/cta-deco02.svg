@@ -1,0 +1,17 @@
+<svg width="227" height="226" viewBox="0 0 227 226" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M113.585 0.00484566C143.622 0.379221 165.908 23.6209 185.666 46.2201C207.092 70.7269 229.688 97.0281 226.739 129.43C223.333 166.859 204.191 204.971 169.824 220.277C136.233 235.238 99.1794 218.093 66.8033 200.662C36.8006 184.509 6.80978 162.851 0.890446 129.325C-4.79015 97.1516 17.738 69.0376 39.2128 44.3947C59.1612 21.5033 83.2032 -0.373838 113.585 0.00484566Z" fill="url(#pattern0_4148_564)"/>
+<defs>
+<pattern id="pattern0_4148_564" patternUnits="userSpaceOnUse" patternTransform="matrix(48 0 0 48 -4.79015 -0.373838)" preserveAspectRatio="none" viewBox="0 0 64 64" width="1" height="1">
+<g id="pattern0_4148_564_inner">
+<g clip-path="url(#clip0_4148_564)">
+<path d="M96 48L-32 48" stroke="#EFCAEA" stroke-width="2"/>
+<path d="M96 16L-32 16" stroke="#EFCAEA" stroke-width="2"/>
+<path d="M16 96V-32" stroke="#EFCAEA" stroke-width="2"/>
+<path d="M48 96V-32" stroke="#EFCAEA" stroke-width="2"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_4148_564">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

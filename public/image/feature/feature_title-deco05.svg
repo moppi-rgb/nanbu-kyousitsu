@@ -1,0 +1,14 @@
+<svg width="100" height="93" viewBox="0 0 100 93" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M99.7251 44.8276C98.5626 56.9193 89.7143 66.5957 78.9687 74.8056C66.8593 84.0575 53.3449 95.3155 37.2193 92.5836C20.9051 89.8197 12.998 75.2505 6.47429 62.524C0.469503 50.8099 -2.86598 37.9914 3.2534 26.3229C9.62841 14.167 22.7596 5.52245 38.1743 2.07828C54.3424 -1.53425 72.5454 -0.954549 85.3946 7.96966C97.9405 16.6833 101.027 31.2895 99.7251 44.8276Z" fill="url(#pattern0_4148_500)"/>
+<defs>
+<pattern id="pattern0_4148_500" patternUnits="userSpaceOnUse" patternTransform="matrix(14.7456 0 0 14.7456 -2.86598 -1.53425)" preserveAspectRatio="none" viewBox="0 0 81.92 81.92" width="1" height="1">
+<g id="pattern0_4148_500_inner">
+<g clip-path="url(#clip0_4148_500)">
+<circle cx="32" cy="32" r="16" fill="#97BF34"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_4148_500">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

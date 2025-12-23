@@ -1,0 +1,20 @@
+<svg width="179" height="163" viewBox="0 0 179 163" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M126.799 158.171C88.8916 172.828 55.5528 151.654 32.5216 127.671C8.24618 102.392 -13.7293 68.967 10.564 37.1332C36.1644 3.58661 86.9668 -5.35957 127.773 2.85356C162.963 9.93622 179.199 39.0857 178.998 71.0341C178.787 104.73 165.095 143.364 126.799 158.171Z" fill="url(#pattern0_4072_1360)"/>
+<defs>
+<pattern id="pattern0_4072_1360" patternUnits="userSpaceOnUse" patternTransform="matrix(-33.92 0 0 -67.84 179.199 172.828)" preserveAspectRatio="none" viewBox="0 0 64 128" width="1" height="1">
+<use xlink:href="#pattern0_4072_1360_inner" transform="translate(-64 0)"/>
+<g id="pattern0_4072_1360_inner">
+<g clip-path="url(#clip0_4072_1360)">
+<path d="M-80 96L48 -32" stroke="#97BF34" stroke-width="2"/>
+<path d="M-48 96L80 -32" stroke="#97BF34" stroke-width="2"/>
+<path d="M-16 96L112 -32" stroke="#97BF34" stroke-width="2"/>
+<path d="M16 96L144 -32" stroke="#97BF34" stroke-width="2"/>
+</g>
+</g>
+<use xlink:href="#pattern0_4072_1360_inner" transform="translate(-32 64)"/>
+<use xlink:href="#pattern0_4072_1360_inner" transform="translate(32 64)"/>
+</pattern><clipPath id="clip0_4072_1360">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

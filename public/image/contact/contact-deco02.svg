@@ -1,0 +1,22 @@
+<svg width="281" height="268" viewBox="0 0 281 268" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M81.9466 7.93963C141.455 -16.1595 193.791 18.6554 229.947 58.0874C268.055 99.6496 302.553 154.606 264.416 206.947C224.228 262.103 144.477 276.812 80.4176 263.308C25.1758 251.663 -0.311636 203.736 0.00287437 151.208C0.33459 95.8054 21.8287 32.2856 81.9466 7.93963Z" fill="url(#pattern0_4072_1359)"/>
+<defs>
+<pattern id="pattern0_4072_1359" patternUnits="userSpaceOnUse" patternTransform="matrix(16.2432 0 0 32.4864 -0.311636 -16.1595)" preserveAspectRatio="none" viewBox="0 0 60.16 120.32" width="1" height="1">
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-90.24 -60.16)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-30.08 -60.16)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(30.08 -60.16)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-120.32 0)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-60.16 0)"/>
+<g id="pattern0_4072_1359_inner">
+<g clip-path="url(#clip0_4072_1359)">
+<circle cx="32" cy="32" r="8" fill="#97BF34"/>
+</g>
+</g>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-90.24 60.16)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(-30.08 60.16)"/>
+<use xlink:href="#pattern0_4072_1359_inner" transform="translate(30.08 60.16)"/>
+</pattern><clipPath id="clip0_4072_1359">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

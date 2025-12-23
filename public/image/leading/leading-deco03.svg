@@ -1,0 +1,21 @@
+<svg width="252" height="215" viewBox="0 0 252 215" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M210.023 28.9484C181.595 10.693 146.809 -2.05139 111.649 0.273592C93.3203 1.47914 76.2078 6.99021 60.7784 16.1179C49.2765 22.9207 34.5017 28.9484 24.9635 37.99C16.9215 45.6539 11.9654 58.0538 8.22494 67.9565C-0.191093 89.8286 -2.52886 113.853 2.98832 136.587C13.1811 178.436 48.1543 210.47 94.91 214.431C155.225 219.597 220.963 189.286 244.435 136.242C262.108 96.373 248.082 53.2316 210.023 28.9484Z" fill="url(#pattern0_4148_508)"/>
+<defs>
+<pattern id="pattern0_4148_508" patternUnits="userSpaceOnUse" patternTransform="matrix(58.88 0 0 58.88 -2.52886 -2.05139)" preserveAspectRatio="none" viewBox="0 0 64 64" width="1" height="1">
+<g id="pattern0_4148_508_inner">
+<g clip-path="url(#clip0_4148_508)">
+<path d="M-88 96L40 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M-72 96L56 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M-56 96L72 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M-40 96L88 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M-24 96L104 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M-8 96L120 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M8 96L136 -32" stroke="#F1C93C" stroke-width="2"/>
+<path d="M24 96L152 -32" stroke="#F1C93C" stroke-width="2"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_4148_508">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>

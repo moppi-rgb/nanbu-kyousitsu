@@ -1,0 +1,17 @@
+<svg width="222" height="176" viewBox="0 0 222 176" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<path d="M215.664 95.9369C188.632 69.6721 150.188 9.01491 107.128 0.443385C78.7118 -5.24183 -14.1608 45.0771 1.83915 75.0774C27.8391 107.077 59.5446 163.942 99.8392 174.577C131.739 183.144 247.497 127.193 215.664 95.9369Z" fill="url(#pattern0_4148_589)"/>
+<defs>
+<pattern id="pattern0_4148_589" patternUnits="userSpaceOnUse" patternTransform="matrix(48 0 0 48 -14.1608 -5.24183)" preserveAspectRatio="none" viewBox="0 0 64 64" width="1" height="1">
+<g id="pattern0_4148_589_inner">
+<g clip-path="url(#clip0_4148_589)">
+<path d="M-80 96L48 -32" stroke="#109C7F" stroke-width="2"/>
+<path d="M-48 96L80 -32" stroke="#109C7F" stroke-width="2"/>
+<path d="M-16 96L112 -32" stroke="#109C7F" stroke-width="2"/>
+<path d="M16 96L144 -32" stroke="#109C7F" stroke-width="2"/>
+</g>
+</g>
+</pattern><clipPath id="clip0_4148_589">
+<rect width="64" height="64" fill="white"/>
+</clipPath>
+</defs>
+</svg>
