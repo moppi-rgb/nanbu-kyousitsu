@@ -699,6 +699,32 @@ Pages
 	gap: 4.6rem;
 	width: 72rem;
 }
+:where(.form) input,
+:where(.form) select {
+	height: 3.6rem;
+}
+:where(.form) input,
+:where(.form) select,
+:where(.form) textarea {
+	background: #f4f4f4;
+	border: none;
+	border-bottom: 0.067rem solid #333333;
+	font-size: var(--font-size-text);
+	border-radius: 0.4rem;
+	padding: 0.8rem;
+}
+:where(.form) input:focus,
+:where(.form) select:focus,
+:where(.form) textarea:focus {
+	outline: 0.2rem solid var(--color-accent);
+	outline-offset: 0;
+}
+:where(.form) input:focus::placeholder,
+:where(.form) select:focus::placeholder,
+:where(.form) textarea:focus::placeholder {
+	color: transparent;
+}
+
 .form-list {
 	display: flex;
 	flex-direction: column;
@@ -720,7 +746,7 @@ Pages
 }
 .form-badge {
 	border-radius: 0.32rem;
-	padding-inline: 0.4rem;
+	padding: 0.2rem 0.4rem;
 	color: #ffffff;
 	font-size: 1.1rem;
 }
@@ -739,7 +765,7 @@ Pages
 	flex-direction: column;
 }
 .form-name-input {
-	width: 24rem;
+	width: 25.2rem;
 }
 .form-example {
 	color: var(--color-form-main);
@@ -749,17 +775,6 @@ Pages
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-}
-.form-field > input,
-.form-field > select {
-	height: 2.9rem;
-}
-.form-field > input,
-.form-field > select,
-.form-field > textarea {
-	background: #f4f4f4;
-	border: none;
-	border-bottom: 0.067rem solid #333333;
 }
 .form-select {
 	width: 56rem;

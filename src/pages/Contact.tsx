@@ -48,7 +48,6 @@ export default function Contact() {
 									aria-label="姓"
 								/>
 								<span className="form-example">例：山田</span>
-								<span className="form-error" id="error-family_name"></span>
 								<p className="form-error-message">{errors.family_name?.message as React.ReactNode}</p>
 							</div>
 							<div className="form-field form-name-field">
@@ -61,7 +60,6 @@ export default function Contact() {
 									aria-label="名"
 								/>
 								<span className="form-example">例：太郎</span>
-								<span className="form-error" id="error-given_name"></span>
 								<p className="form-error-message">{errors.given_name?.message as React.ReactNode}</p>
 							</div>
 						</div>
@@ -73,7 +71,6 @@ export default function Contact() {
 						<div className="form-field">
 							<input className="form-input" type="email" id="email" {...register("email")} />
 							<span className="form-example">例：info@gmail.com</span>
-							<span className="form-error" id="error-email"></span>
 						</div>
 						<p className="form-error-message">{errors.email?.message as React.ReactNode}</p>
 					</li>
@@ -84,18 +81,16 @@ export default function Contact() {
 						<div className="form-field">
 							<input className="form-input" type="tel" id="tel" {...register("tel")} />
 							<span className="form-example">例：09012345678</span>
-							<span className="form-error" id="error-tel"></span>
-						</div>
-					</li>
+						</div>					<p className="form-error-message">{errors.tel?.message as React.ReactNode}</p>					</li>
 					<li className="form-item">
 						<label htmlFor="zipcode" className="form-legend">
 							<span className="form-badge form-badge-optional">任意</span>郵便番号
 						</label>
 						<div className="form-field">
-							<input className="form-input" type="number" id="zipcode" {...register("zipcode")} />
-							<span className="form-example">例：1234567</span>
-							<span className="form-error" id="error-zipcode"></span>
+							<input className="form-input" type="text" id="zipcode" {...register("zipcode")} />
+							<span className="form-example">例:1234567</span>
 						</div>
+						<p className="form-error-message">{errors.zipcode?.message as React.ReactNode}</p>
 					</li>
 					<li className="form-item">
 						<label htmlFor="address" className="form-legend">
@@ -104,9 +99,7 @@ export default function Contact() {
 						<div className="form-field">
 							<input className="form-input" type="text" id="address" {...register("address")} />
 							<span className="form-example">例：東京都新宿区西新宿2-8-1</span>
-							<span className="form-error" id="error-address"></span>
-						</div>
-					</li>
+						</div>					<p className="form-error-message">{errors.address?.message as React.ReactNode}</p>					</li>
 					<li className="form-item">
 						<label htmlFor="subject" className="form-legend">
 							<span className="form-badge form-badge-required">必須</span>件名
@@ -122,7 +115,6 @@ export default function Contact() {
 								<option value="◎◎◎">◎◎◎について</option>
 								<option value="その他">その他</option>
 							</select>
-							<span className="form-error" id="error-subject"></span>
 						</div>
 						<p className="form-error-message">{errors.subject?.message as React.ReactNode}</p>
 					</li>
@@ -132,7 +124,6 @@ export default function Contact() {
 						</label>
 						<div className="form-field">
 							<textarea className="form-textarea" id="message" {...register("message")} />
-							<span className="form-error" id="error-message"></span>
 						</div>
 						<p className="form-error-message">{errors.message?.message as React.ReactNode}</p>
 					</li>
