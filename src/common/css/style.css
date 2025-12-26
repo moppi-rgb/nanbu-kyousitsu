@@ -15,6 +15,9 @@ Foundation
 	--color-main: #efefef;
 	--color-accent: #4fb7a6;
 	--color-font: #0a1922;
+	--color-form-main: #7e7e7e;
+	--color-label-sub: #9e9e9e;
+	--color-form-accent: #eb4a68;
 	--wrapper-width: 124rem;
 	--header-height: 18.4rem;
 	--font-notosans: "Noto Sans JP", sans-serif;
@@ -27,8 +30,8 @@ Foundation
 /* Base
    ----------------------------------------------------------------- */
 html {
-	font-size: 62.5%; /* 1rem = 10px */
 	color: var(--color-font);
+	font-size: 62.5%; /* 1rem = 10px */
 }
 body {
 	overflow-x: hidden;
@@ -184,9 +187,9 @@ Components
 }
 .leading_deco > img {
 	position: absolute;
-	pointer-events: none;
-	height: auto;
 	transform-origin: center center;
+	height: auto;
+	pointer-events: none;
 }
 .leading_deco01 {
 	top: 8%;
@@ -225,21 +228,21 @@ Components
 }
 .feature_title-deco {
 	position: absolute;
+	z-index: -11; /* keep behind feature_items (z-index:-10) */
 	width: stretch;
 	height: stretch;
-	z-index: -11; /* keep behind feature_items (z-index:-10) */
 }
 .feature_title-deco > img {
 	position: absolute;
-	pointer-events: none;
-	height: auto;
 	transform-origin: center center;
+	height: auto;
+	pointer-events: none;
 }
 .feature_deco {
 	position: absolute;
-	pointer-events: none;
-	height: auto;
 	transform-origin: center center;
+	height: auto;
+	pointer-events: none;
 }
 .feature_deco01 {
 	top: 2%;
@@ -567,7 +570,7 @@ Components
 	height: 4rem;
 	content: url(/image/contactCTA/contactCTA-phone.svg);
 }
-.contact_button {
+.button {
 	padding: 2.6rem 4.8rem;
 	font-size: var(--font-size-subtitle);
 }
@@ -671,5 +674,131 @@ Components
 Pages
 ----------------------------------------
 */
-/* Home
+/* Contact
    ----------------------------------------------------------------- */
+.contact {
+	display: grid;
+	place-items: center;
+	gap: 16rem;
+	padding: 16rem 0;
+}
+.contact_title-wrapper {
+	display: grid;
+	place-items: center;
+	gap: 1.6rem;
+}
+.contact_title {
+	font-size: var(--font-size-title);
+}
+.contact_title-text {
+	font-size: var(--font-size-text);
+}
+.form {
+	display: grid;
+	place-items: center;
+	gap: 4.6rem;
+	width: 72rem;
+}
+.form-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 3.2rem;
+	width: 100%;
+	line-height: 150%;
+}
+.form-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+.form-legend {
+	display: flex;
+	align-items: center;
+	gap: 0.8rem;
+	font-size: var(--font-size-text);
+}
+.form-badge {
+	border-radius: 0.32rem;
+	padding-inline: 0.4rem;
+	color: #ffffff;
+	font-size: 1.1rem;
+}
+.form-badge-required {
+	background: var(--color-form-accent);
+}
+.form-badge-optional {
+	background: var(--color-label-sub);
+}
+.form-name-group {
+	display: flex;
+	gap: 5.6rem;
+}
+.form-name-field {
+	display: flex;
+	flex-direction: column;
+}
+.form-name-input {
+	width: 24rem;
+}
+.form-example {
+	color: var(--color-form-main);
+	font-size: 1.3rem;
+}
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+.form-field > input,
+.form-field > select {
+	height: 2.9rem;
+}
+.form-field > input,
+.form-field > select,
+.form-field > textarea {
+	background: #f4f4f4;
+	border: none;
+	border-bottom: 0.067rem solid #333333;
+}
+.form-select {
+	width: 56rem;
+	font-size: 1.44rem;
+}
+.form-textarea {
+	height: 11.2rem;
+}
+.form-agreement {
+	display: flex;
+	align-items: center;
+	gap: 1.4rem;
+}
+.form-checkbox {
+	width: 2rem;
+	height: 2rem;
+}
+.form-agreement-label {
+	font-size: var(--font-size-text);
+}
+.form-link {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+.form-submit {
+	display: grid;
+	place-items: center;
+	border: none;
+	border-radius: 4rem;
+	background: #b7b7b7;
+	width: 24rem;
+	height: 4.8rem;
+	color: var(--color-base);
+}
+.form-submit:hover {
+	background: var(--color-accent);
+}
+.form-error-message {
+	color: var(--color-form-accent);
+	font-size: 1.2rem;
+}
