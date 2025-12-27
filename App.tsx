@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "/src/layouts/Layout";
-import Contact from "/src/pages/Contact";
-import Home from "/src/pages/Home";
+import Layout from "/src/layouts/Layout.tsx";
+import Contact from "/src/pages/Contact.tsx";
+import Home from "/src/pages/Home.tsx";
 
 export default function App() {
 	return (
