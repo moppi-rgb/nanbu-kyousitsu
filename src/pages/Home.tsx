@@ -1,4 +1,3 @@
-// motion is not used currently; remove to satisfy lint
 import Access from "../common/components/Access";
 import ContactCTA from "../common/components/ContactCTA";
 import CTA from "../common/components/CTA";

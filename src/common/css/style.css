@@ -210,12 +210,12 @@ Components
 	width: 18rem;
 }
 .leading_deco05 {
-	top: 90%;
+	top: 65%;
 	right: 9%;
 	width: 23rem;
 }
 .leading_deco06 {
-	top: 100%;
+	top: 80%;
 	right: 17%;
 	width: 17rem;
 }
@@ -723,7 +723,7 @@ Components
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	gap: 3.2rem;
+	gap: 1.6rem;
 	width: 100%;
 	line-height: 150%;
 }
@@ -770,9 +770,15 @@ Components
 	flex-direction: column;
 	gap: 0.5rem;
 }
+.form_error-message-wrapper {
+	height: 1.6rem;
+}
 .form_select {
 	width: 56rem;
 	font-size: 1.44rem;
+}
+.form_select-placeholder {
+	color: var(--color-main);
 }
 .form_textarea {
 	height: 11.2rem;
@@ -798,9 +804,6 @@ Components
 .form_agreement-link {
 	text-decoration: underline;
 	text-underline-offset: 0.5rem;
-}
-.form_complete-message {
-	line-height: 2.5;
 }
 .form_button-group {
 	display: flex;
@@ -835,12 +838,13 @@ Components
 	color: var(--color-form_accent);
 	font-size: 1.2rem;
 }
+.form_confirm-list {
+	gap: 3.2rem;
+}
 .form_confirm-text {
 	font-size: 1.4rem;
 }
-
-/*
-----------------------------------------
-Pages
-----------------------------------------
-*/
+.form_complete-message {
+	line-height: 2.5;
+	text-align: center;
+}

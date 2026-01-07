@@ -42,7 +42,7 @@ export default function ContactConfirm({ onBack, onSubmit }: ContactConfirmProps
                 </p>
             </div>
             <div className="form form_confirm">
-                <ul className="form_list">
+                <ul className="form_list form_confirm-list">
                     <li className="form_item">
                         <div className="form_legend">お名前</div>
                         <div className="form_confirm-text">

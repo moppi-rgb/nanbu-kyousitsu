@@ -53,7 +53,9 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 									aria-label="姓"
 								/>
 								<span className="form_example">例：山田</span>
-								<p className="form_error-message">{errors.family_name?.message as React.ReactNode}</p>
+								<div className="form_error-message-wrapper">
+									<p className="form_error-message">{errors.family_name?.message as React.ReactNode}</p>
+								</div>
 							</div>
 							<div className="form_field form_name-field">
 								<input
@@ -65,7 +67,10 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 									aria-label="名"
 								/>
 								<span className="form_example">例：太郎</span>
-								<p className="form_error-message">{errors.given_name?.message as React.ReactNode}</p>
+								<div className="form_error-message-wrapper">
+
+									<p className="form_error-message">{errors.given_name?.message as React.ReactNode}</p>
+								</div>
 							</div>
 						</div>
 					</li>
@@ -76,8 +81,11 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<div className="form_field">
 							<input className="form_input" type="email" id="email" {...register("email")} />
 							<span className="form_example">例：info@gmail.com</span>
+							<div className="form_error-message-wrapper">
+								<p className="form_error-message">{errors.email?.message as React.ReactNode}</p>
+							</div>
 						</div>
-						<p className="form_error-message">{errors.email?.message as React.ReactNode}</p>
+
 					</li>
 					<li className="form_item">
 						<label htmlFor="tel" className="form_legend">
@@ -86,7 +94,11 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<div className="form_field">
 							<input className="form_input" type="tel" id="tel" {...register("tel")} />
 							<span className="form_example">例：09012345678</span>
-						</div>					<p className="form_error-message">{errors.tel?.message as React.ReactNode}</p>					</li>
+							<div className="form_error-message-wrapper">
+								<p className="form_error-message">{errors.tel?.message as React.ReactNode}</p>
+							</div>
+						</div>
+					</li>
 					<li className="form_item">
 						<label htmlFor="zipcode" className="form_legend">
 							<span className="form_badge form_badge-optional">任意</span>郵便番号
@@ -94,8 +106,11 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<div className="form_field">
 							<input className="form_input" type="text" id="zipcode" {...register("zipcode")} />
 							<span className="form_example">例:1234567</span>
+							<div className="form_error-message-wrapper">
+								<p className="form_error-message">{errors.zipcode?.message as React.ReactNode}</p>
+							</div>
 						</div>
-						<p className="form_error-message">{errors.zipcode?.message as React.ReactNode}</p>
+
 					</li>
 					<li className="form_item">
 						<label htmlFor="address" className="form_legend">
@@ -104,7 +119,11 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<div className="form_field">
 							<input className="form_input" type="text" id="address" {...register("address")} />
 							<span className="form_example">例：東京都新宿区西新宿2-8-1</span>
-						</div>					<p className="form_error-message">{errors.address?.message as React.ReactNode}</p>					</li>
+							<div className="form_error-message-wrapper">
+								<p className="form_error-message">{errors.address?.message as React.ReactNode}</p>
+							</div>
+						</div>
+					</li>
 					<li className="form_item">
 						<label htmlFor="subject" className="form_legend">
 							<span className="form_badge form_badge-required">必須</span>件名
@@ -121,7 +140,9 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 								<option value="その他">その他</option>
 							</select>
 						</div>
-						<p className="form_error-message">{errors.subject?.message as React.ReactNode}</p>
+						<div className="form_error-message-wrapper">
+							<p className="form_error-message">{errors.subject?.message as React.ReactNode}</p>
+						</div>
 					</li>
 					<li className="form_item">
 						<label htmlFor="message" className="form_legend">
@@ -130,7 +151,9 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<div className="form_field">
 							<textarea className="form_textarea" id="message" {...register("message")} />
 						</div>
-						<p className="form_error-message">{errors.message?.message as React.ReactNode}</p>
+						<div className="form_error-message-wrapper">
+							<p className="form_error-message">{errors.message?.message as React.ReactNode}</p>
+						</div>
 					</li>
 				</ul>
 				<div className="form_agreement">
@@ -140,7 +163,9 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 							<Link to="/" className="form_agreement-link">個人情報の取り扱い</Link>について同意する
 						</label>
 					</div>
-					<p className="form_error-message">{errors.agreement?.message as React.ReactNode}</p>
+					<div className="form_error-message-wrapper">
+						<p className="form_error-message">{errors.agreement?.message as React.ReactNode}</p>
+					</div>
 				</div>
 				<button className="form_button form_button-submit" type="submit">入力内容を確認</button>
 			</form>
