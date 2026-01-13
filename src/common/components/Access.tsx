@@ -1,16 +1,6 @@
 export default function Access() {
 	return (
 		<section className="grid-center access">
-			{/* <img
-				src="/public/image/access/access-deco01.svg"
-				alt=""
-				className="access_deco access_deco01"
-			/>
-			<img
-				src="/public/image/access/access-deco02.svg"
-				alt=""
-				className="access_deco access_deco02"
-			/> */}
 			<h2 className="sec-title access_title">アクセス</h2>
 			<div className="access_wrapper">
 				<iframe

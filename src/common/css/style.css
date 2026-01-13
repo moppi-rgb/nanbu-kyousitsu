@@ -41,6 +41,9 @@ p,
 a {
 	font-size: var(--font-size-text);
 }
+img {
+	overflow-x: hidden;
+}
 .wrapper {
 	margin-inline: auto;
 	max-width: var(--wrapper-width);
@@ -158,7 +161,6 @@ Components
 	display: grid;
 	position: relative;
 	place-items: center;
-	background: url(/image/leading/leading-line.svg) no-repeat bottom / contain;
 	padding: 0 6.5rem 3rem;
 }
 .leading_title {
@@ -167,7 +169,7 @@ Components
 }
 .leading_title-line {
 	position: absolute;
-	top: 2rem;
+	bottom: 0;
 	z-index: -1;
 }
 .leading_text {
@@ -200,23 +202,23 @@ Components
 	width: 16rem;
 }
 .leading_deco03 {
-	top: 73%;
-	left: 16%;
+	top: 55%;
+	left: 10%;
 	width: 25rem;
 }
 .leading_deco04 {
-	top: 85%;
-	left: 10%;
+	top: 70%;
+	left: 5%;
 	width: 18rem;
 }
 .leading_deco05 {
 	top: 65%;
-	right: 9%;
+	right: 6%;
 	width: 23rem;
 }
 .leading_deco06 {
-	top: 80%;
-	right: 17%;
+	top: 82%;
+	right: 15%;
 	width: 17rem;
 }
 /* Feature
@@ -234,37 +236,35 @@ Components
 	position: absolute;
 	pointer-events: none;
 }
-.feature_deco {
-	position: absolute;
-	pointer-events: none;
-}
-.feature_deco01 {
+.feature_title-deco01 {
 	top: 2%;
-	left: -2%;
+	left: -4%;
 	width: 27rem;
 }
-.feature_deco02 {
-	top: 4%;
-	right: 17%;
-	width: 11rem;
-}
-.feature_deco03 {
-	top: 12%;
-	left: 17%;
-	width: 10rem;
-}
-.feature_deco04 {
-	top: 13%;
-	right: 5%;
-	width: 20rem;
-}
 .feature_title-deco02 {
-	top: -2rem;
-	left: 20rem;
+	top: -2%;
+	left: 12%;
+	width: 18rem;
 }
 .feature_title-deco03 {
-	top: -3rem;
-	right: -7rem;
+	top: -2%;
+	right: -4%;
+	width: 25rem;
+}
+.feature_title-deco04 {
+	top: 5%;
+	right: 14%;
+	width: 10rem;
+}
+.feature_title-deco05 {
+	top: 22rem;
+	left: 26rem;
+	width: 10rem;
+}
+.feature_title-deco06 {
+	top: 23rem;
+	right: 3rem;
+	width: 15rem;
 }
 .feature_title {
 	padding: 12rem 0 10rem;
@@ -278,7 +278,7 @@ Components
 	grid-template-rows: repeat(3, 1fr);
 	place-items: center;
 	gap: 8rem;
-	z-index: -10;
+	z-index: -5;
 	margin-bottom: 10rem;
 	background:
 		url(/image/feature/feature_item-bg04.svg) no-repeat center / contain;
@@ -293,7 +293,14 @@ Components
 	width: 112rem;
 	height: 50.4rem;
 }
-
+.feature_item01,
+.feature_item02,
+.feature_item03 {
+	position: relative;
+}
+.feature_item-deco {
+	position: absolute;
+}
 .feature_item-media {
 	grid-row: 1 / 2;
 	height: stretch;
@@ -308,7 +315,6 @@ Components
 	grid-column: 1 / 3;
 }
 .feature_item-img {
-	position: relative;
 	border-radius: 6rem;
 	width: 60.4rem;
 	height: stretch;
@@ -366,6 +372,53 @@ Components
 .feature_text {
 	margin-top: 4rem;
 	line-height: 1.7;
+}
+.feature_item-deco01 {
+	top: -13rem;
+	left: -7rem;
+	width: 17rem;
+}
+.feature_item-deco02 {
+	top: 2rem;
+	left: -13rem;
+	z-index: -1;
+}
+.feature_item-deco03 {
+	top: 0rem;
+	right: -20rem;
+}
+.feature_item-deco04 {
+	top: 37rem;
+	right: -7rem;
+}
+.feature_item-deco05 {
+	top: 37rem;
+	left: -10rem;
+	z-index: 1;
+}
+.feature_item-deco06 {
+	top: 100rem;
+	right: -6rem;
+	z-index: -10;
+}
+.feature_item-deco07 {
+	top: 15rem;
+	left: -27rem;
+	z-index: -1;
+}
+.feature_item-deco08 {
+	top: 30rem;
+	left: -15rem;
+	z-index: -1;
+}
+.feature_item-deco09 {
+	top: 0rem;
+	right: -4rem;
+	z-index: 1;
+}
+.feature_item-deco10 {
+	top: 16rem;
+	right: -14rem;
 }
 /* Program
    ----------------------------------------------------------------- */
@@ -436,14 +489,14 @@ Components
 /* CTA
    ----------------------------------------------------------------- */
 .cta {
-	display: flex;
-	anchor-name: --cta-anchor;
-	justify-content: center;
 	gap: 7.2rem;
-	margin: 6rem auto;
-	background: url(/image/cta/cta-background.svg) no-repeat center / contain;
-	width: 103rem;
-	height: 27rem;
+	display: flex;
+	justify-content: center;
+	background:
+		url(/image/cta/cta-background.svg) no-repeat center / 103rem 27rem;
+	width: stretch;
+	height: 42rem;
+	position: relative;
 }
 .cta_button {
 	gap: 3.2rem;
@@ -458,19 +511,16 @@ Components
 	position: absolute;
 }
 .cta_deco01 {
-	position-anchor: --cta-anchor;
-	top: calc(anchor(top) - 7rem);
-	left: calc(anchor(left) - 6rem);
+	top: 0;
+	left: 14rem;
 }
 .cta_deco02 {
-	position-anchor: --cta-anchor;
-	right: calc(anchor(right) - 6rem);
-	bottom: calc(anchor(bottom) - 6rem);
+	bottom: 1rem;
+	right: 13rem;
 }
 .cta_deco03 {
-	position-anchor: --cta-anchor;
-	bottom: calc(anchor(bottom) - 2rem);
-	left: calc(anchor(left) - 4.5rem);
+	bottom: 6rem;
+	left: 16rem;
 }
 /* Access
    ----------------------------------------------------------------- */
@@ -479,7 +529,7 @@ Components
 		url(/image/access/access-deco02.svg) no-repeat 95% 80% / 17rem 20rem,
 		url(/image/access/access-background01.svg) no-repeat center 4rem / 130rem
 		auto,
-		url(/image/access/access-deco01.svg) no-repeat 5% 15% / 30rem 23rem,
+		url(/image/access/access-deco01.svg) no-repeat 5% 10% / 30rem 23rem,
 		url(/image/access/access-background02.svg) no-repeat top center / cover;
 	padding: 8.8rem 0 12rem;
 }
@@ -521,14 +571,11 @@ Components
 /* Contact
    ----------------------------------------------------------------- */
 .contact-cta {
+	position: relative;
 	background:
-		url(/image/contactCTA/contactCTA-deco01.svg) no-repeat 12% 5% / 22rem,
 		url(/image/contactCTA/contactCTA-background01.svg) no-repeat top center /
-		90rem,
-		url(/image/contactCTA/contactCTA-deco02.svg) no-repeat 5% 80% / 12rem,
-		url(/image/contactCTA/contactCTA-deco03.svg) no-repeat 90% 5% / 10rem,
-		var(--color-main);
-	padding: 8rem 0 11.2rem;
+		90rem var(--color-main);
+	padding: 8rem 0 12.8rem;
 	text-align: center;
 }
 .contact-cta_wrapper {
@@ -567,6 +614,21 @@ Components
 .button {
 	padding: 2.6rem 4.8rem;
 	font-size: var(--font-size-subtitle);
+}
+.contact-cta_deco {
+	position: absolute;
+}
+.contact-cta_deco01 {
+	top: 2rem;
+	left: 15rem;
+}
+.contact-cta_deco02 {
+	bottom: 6rem;
+	left: 6rem;
+}
+.contact-cta_deco03 {
+	top: 6rem;
+	right: 6rem;
 }
 
 /* Footer
@@ -700,12 +762,12 @@ Components
 :where(.form) input,
 :where(.form) select,
 :where(.form) textarea {
-	background: #f4f4f4;
 	border: none;
 	border-bottom: 0.067rem solid #333333;
-	font-size: var(--font-size-text);
 	border-radius: 0.4rem;
+	background: #f4f4f4;
 	padding: 0.8rem;
+	font-size: var(--font-size-text);
 }
 :where(.form) input:focus,
 :where(.form) select:focus,
@@ -816,8 +878,8 @@ Components
 	border-radius: 4rem;
 	width: 24rem;
 	height: 4.8rem;
-	font-size: var(--font-size-text);
 	color: var(--color-base);
+	font-size: var(--font-size-text);
 }
 .form_button-submit {
 	background: var(--color-accent);
@@ -826,9 +888,9 @@ Components
 	opacity: 0.6;
 }
 .form_button-back {
+	border: 0.2rem solid var(--color-accent);
 	/* background: var(--color-label-sub); */
 	background: var(--color-base);
-	border: 0.2rem solid var(--color-accent);
 	color: var(--color-accent);
 }
 .form_button-back:hover {

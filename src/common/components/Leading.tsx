@@ -1,9 +1,17 @@
+import { motion } from "motion/react";
+
 export default function Leading() {
 	return (
 		<section className="grid-center leading">
-			<div className="leading_title-wrapper">
+			<motion.div
+				initial={{ opacity: 0, filter: "blur(10px)" }}
+				whileInView={{ opacity: 1, filter: "blur(0px)" }}
+				viewport={{ once: true, amount: 0.5 }}
+				transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
+				className="leading_title-wrapper">
 				<h2 className="leading_title">子どもは遊びながら学んでいる</h2>
-			</div>
+				<img src="/public/image/leading/leading-line.svg" alt="" className="leading_title-line" />
+			</motion.div>
 			<p className="leading_text">
 				<span className="leading_text-span">
 					総合福祉サービス(あいのて)は3歳～18歳のお子さんを対象とした
