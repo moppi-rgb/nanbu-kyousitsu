@@ -86,7 +86,7 @@ export default function ContactConfirm({ onBack, onSubmit }: ContactConfirmProps
                     <button type="button" className="form_button form_button-back" onClick={onBack}>
                         入力内容を修正
                     </button>
-                    <button type="button" className="form_button form_button-submit" onClick={handleFormSubmit}>
+                    <button type="button" className="buttonform_button form_button-submit" onClick={handleFormSubmit}>
                         送信する
                     </button>
                 </div>

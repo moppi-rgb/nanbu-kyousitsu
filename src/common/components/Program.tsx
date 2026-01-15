@@ -10,21 +10,6 @@ const programImages = [
 export default function Program() {
 	return (
 		<section className="grid-center program">
-			<img
-				src="/image/program/program-deco01.svg"
-				alt=""
-				className="program_deco program_deco01"
-			/>
-			<img
-				src="/image/program/program-deco02.svg"
-				alt=""
-				className="program_deco program_deco02"
-			/>
-			<img
-				src="/image/program/program_img-bg.svg"
-				alt=""
-				className="program_img-bg"
-			/>
 			<div className="program_wrapper">
 				<h2 className="sec-title program_title">療育内容</h2>
 				<p className="program_text">
@@ -45,10 +30,27 @@ export default function Program() {
 						className="program_image"
 					/>
 				))}
+			</div>
+			<div className="decorations program_deco">
+				<img
+					src="/image/program/program-deco01.svg"
+					alt=""
+					className="program_deco01"
+				/>
+				<img
+					src="/image/program/program-deco02.svg"
+					alt=""
+					className="program_deco02"
+				/>
+				<img
+					src="/image/program/program_img-bg.svg"
+					alt=""
+					className="program_img-bg"
+				/>
 				<img
 					src="/image/program/program-deco03.svg"
 					alt=""
-					className="program_deco program_deco03"
+					className="program_deco03"
 				/>
 			</div>
 		</section>

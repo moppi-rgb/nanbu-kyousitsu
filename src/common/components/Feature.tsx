@@ -10,36 +10,36 @@ export default function Feature() {
 					それが南部教室の特徴です。
 				</h2>
 			</div>
-			<div className="feature_title-deco">
+			<div className="decorations feature_title-deco">
 				<img
 					src="/public/image/feature/feature_title-deco01.svg"
 					alt=""
-					className="feature_title-deco01"
+					className="feature_title-deco feature_title-deco01"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco02.svg"
 					alt=""
-					className="feature_title-deco02"
+					className="feature_title-deco feature_title-deco02"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco03.svg"
 					alt=""
-					className="feature_title-deco03"
+					className="feature_title-deco feature_title-deco03"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco04.svg"
 					alt=""
-					className="feature_title-deco04"
+					className="feature_title-deco feature_title-deco04"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco05.svg"
 					alt=""
-					className="feature_title-deco05"
+					className="feature_title-deco feature_title-deco05"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco06.svg"
 					alt=""
-					className="feature_title-deco06"
+					className="feature_title-deco feature_title-deco06"
 				/>
 			</div>
 			<div className="feature_items">
@@ -67,18 +67,20 @@ export default function Feature() {
 							生き生きとした療育活動ができるような環境を整え、さまざまな体験を通して子どもたちのココロを解放させ、思いのままに個性を発揮できるような指導をします。
 						</p>
 					</div>
-					<img src="/public/image/feature/feature_item-deco01.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco01" />
-					<img src="/public/image/feature/feature_item-deco02.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco02" />
-					<img src="/public/image/feature/feature_item-deco03.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco03" />
-					<img src="/public/image/feature/feature_item-deco04.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco04" />
+					<div className="decorations feature_item-deco">
+						<img src="/public/image/feature/feature_item-deco01.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco01" />
+						<img src="/public/image/feature/feature_item-deco02.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco02" />
+						<img src="/public/image/feature/feature_item-deco03.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco03" />
+						<img src="/public/image/feature/feature_item-deco04.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco04" />
+					</div>
 				</div>
 				<div className="feature_item feature_item02">
 					<div className="feature_item-media feature_item-media02">
@@ -104,9 +106,11 @@ export default function Feature() {
 							楽しい遊びを通してスタッフとの信頼関係を築くことで、社会性の成熟をめざします。
 						</p>
 					</div>
-					<img src="/public/image/feature/feature_item-deco05.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco05" />
+					<div className="decorations feature_item-deco">
+						<img src="/public/image/feature/feature_item-deco05.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco05" />
+					</div>
 				</div>
 				<div className="feature_item feature_item03">
 					<div className="feature_item-media feature_item-media03">
@@ -133,23 +137,27 @@ export default function Feature() {
 							子どもが発する表現·表出を重視し、友達や大人との社会的関係性を獲得し、自分のココロをうまく表現できる喜びを味わえるような指導をします。
 						</p>
 					</div>
-					<img src="/public/image/feature/feature_item-deco07.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco07" />
-					<img src="/public/image/feature/feature_item-deco08.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco08" />
-					<img src="/public/image/feature/feature_item-deco09.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco09" />
-					<img src="/public/image/feature/feature_item-deco10.svg"
-						alt=""
-						className="feature_item-deco feature_item-deco10" />
+					<div className="decorations feature_item-deco">
+						<img src="/public/image/feature/feature_item-deco07.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco07" />
+						<img src="/public/image/feature/feature_item-deco08.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco08" />
+						<img src="/public/image/feature/feature_item-deco09.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco09" />
+						<img src="/public/image/feature/feature_item-deco10.svg"
+							alt=""
+							className="feature_item-deco feature_item-deco10" />
+					</div>
 				</div>
 			</div>
-			<img src="/public/image/feature/feature_item-deco06.svg"
-				alt=""
-				className="feature_item-deco feature_item-deco06" />
+			<div className="decorations feature_item-deco">
+				<img src="/public/image/feature/feature_item-deco06.svg"
+					alt=""
+					className="feature_item-deco feature_item-deco06" />
+			</div>
 		</section>
 	);
 }

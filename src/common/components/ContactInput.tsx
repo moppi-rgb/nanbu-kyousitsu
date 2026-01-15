@@ -167,7 +167,7 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 						<p className="form_error-message">{errors.agreement?.message as React.ReactNode}</p>
 					</div>
 				</div>
-				<button className="form_button form_button-submit" type="submit">入力内容を確認</button>
+				<button className="button form_button form_button-submit" type="submit">入力内容を確認</button>
 			</form>
 		</section>
 	);

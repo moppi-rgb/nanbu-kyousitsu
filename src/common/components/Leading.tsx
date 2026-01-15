@@ -49,7 +49,7 @@ export default function Leading() {
 				</span>
 			</p>
 
-			<div className="leading_deco">
+			<div className="decorations leading_deco">
 				<img
 					src="/image/leading/leading-deco01.svg"
 					alt=""

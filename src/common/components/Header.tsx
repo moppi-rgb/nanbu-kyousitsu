@@ -18,7 +18,7 @@ export default function Header() {
 					<HeaderLogo />
 				</Link>
 				<div className="header_nav-wrapper">
-					<Link to="/" className="header_button">
+					<Link to="/" className="button header_button">
 						見学予約
 					</Link>
 					<nav className="nav">

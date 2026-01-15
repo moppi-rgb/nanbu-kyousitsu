@@ -93,7 +93,7 @@ export default function Footer() {
 					</ul>
 				</nav>
 			</div>
-			<div className="footer_deco">
+			<div className="decorations footer_deco">
 				<img
 					src="/public/image/common/footer-deco01.svg"
 					alt=""

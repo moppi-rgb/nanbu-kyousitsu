@@ -34,15 +34,29 @@ html {
 	font-size: 62.5%; /* 1rem = 10px */
 }
 body {
-	overflow-x: hidden;
 	line-height: 1;
+}
+section {
+	overflow-x: clip;
 }
 p,
 a {
 	font-size: var(--font-size-text);
 }
-img {
-	overflow-x: hidden;
+@media (width < 1200px) {
+	html {
+		font-size: 52.5%;
+	}
+}
+@media (width < 950px) {
+	html {
+		font-size: 47.5%;
+	}
+}
+@media (width < 820px) {
+	html {
+		font-size: 62.5%;
+	}
 }
 .wrapper {
 	margin-inline: auto;
@@ -68,6 +82,33 @@ img {
 	border-radius: 7.5rem;
 	background: var(--color-accent);
 	color: #ffffff;
+	z-index: 10;
+}
+.button:hover {
+	outline: 0.5rem solid var(--color-accent);
+	background: var(--color-base);
+	color: var(--color-accent);
+}
+.button::before,
+.button::after {
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(226deg)
+		brightness(106%) contrast(103%);
+	/* svgを黒一色で書き出し、ホバーで色を変化させるためfilterを使用 */
+}
+.button:hover::before,
+.button:hover::after {
+	filter: invert(62%) sepia(70%) saturate(304%) hue-rotate(121deg)
+		brightness(90%) contrast(86%);
+}
+.decorations {
+	position: absolute;
+	width: stretch;
+	height: stretch;
+}
+.decorations > img {
+	position: absolute;
+	pointer-events: none;
+	user-select: none;
 }
 /*
 ----------------------------------------
@@ -182,14 +223,7 @@ Components
 	text-align: center;
 }
 .leading_deco {
-	position: absolute;
 	z-index: -1;
-	width: stretch;
-	height: stretch;
-}
-.leading_deco > img {
-	position: absolute;
-	pointer-events: none;
 }
 .leading_deco01 {
 	top: 8%;
@@ -228,13 +262,7 @@ Components
 }
 .feature_title-deco {
 	position: absolute;
-	z-index: -11; /* keep behind feature_items (z-index:-10) */
-	width: stretch;
-	height: stretch;
-}
-.feature_title-deco > img {
-	position: absolute;
-	pointer-events: none;
+	z-index: -11;
 }
 .feature_title-deco01 {
 	top: 2%;
@@ -442,17 +470,17 @@ Components
 	line-height: 1.7;
 }
 .program_button {
+	justify-content: center;
 	gap: 1.6rem;
-	padding: 2rem 3.6rem;
+	padding: 1.6rem 3.6rem;
 	width: 24rem;
 	font-size: 2rem;
 }
 .program_button::after {
-	content: url(/image/program/program-arrow.svg);
+	content: url(/public/image/common/arrow.svg);
 }
 .program_images {
 	display: grid;
-	anchor-name: --program-images-anchor;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 3.9rem;
 	width: 60rem;
@@ -464,39 +492,35 @@ Components
 	height: 21rem;
 	object-fit: cover;
 }
-.program_deco {
-	position: absolute;
-}
 .program_deco01 {
-	left: -13rem;
+	bottom: 20rem;
+	left: -14rem;
 	width: 26rem;
 }
 .program_deco02 {
-	right: -9rem;
-	bottom: -16rem;
+	right: -7rem;
+	bottom: -14rem;
 }
 .program_deco03 {
-	position-anchor: --program-images-anchor;
-	right: calc(anchor(right) - 10rem);
-	bottom: calc(anchor(bottom) - 1.5rem);
+	right: 18rem;
+	bottom: 8rem;
 }
 .program_img-bg {
-	position: absolute;
-	position-anchor: --program-images-anchor;
-	right: calc(anchor(right) - 8rem);
+	right: 19rem;
+	top: 3rem;
 	z-index: -1;
 }
 /* CTA
    ----------------------------------------------------------------- */
 .cta {
-	gap: 7.2rem;
 	display: flex;
+	position: relative;
 	justify-content: center;
+	gap: 7.2rem;
 	background:
 		url(/image/cta/cta-background.svg) no-repeat center / 103rem 27rem;
 	width: stretch;
 	height: 42rem;
-	position: relative;
 }
 .cta_button {
 	gap: 3.2rem;
@@ -505,18 +529,15 @@ Components
 	font-size: var(--font-size-title);
 }
 .cta_button::after {
-	content: url(/image/program/program-arrow.svg);
-}
-.cta_deco {
-	position: absolute;
+	content: url(/public/image/common/arrow.svg);
 }
 .cta_deco01 {
 	top: 0;
 	left: 14rem;
 }
 .cta_deco02 {
-	bottom: 1rem;
 	right: 13rem;
+	bottom: 1rem;
 }
 .cta_deco03 {
 	bottom: 6rem;
@@ -564,10 +585,6 @@ Components
 .access_subtitle {
 	font-size: 2rem;
 }
-.access_deco {
-	position: absolute;
-}
-
 /* Contact
    ----------------------------------------------------------------- */
 .contact-cta {
@@ -595,6 +612,7 @@ Components
 .contact-cta_text {
 	display: flex;
 	flex-direction: column;
+	gap: 0.4rem;
 	font-weight: 500;
 	font-size: var(--font-size-subtitle);
 }
@@ -611,16 +629,19 @@ Components
 	height: 4rem;
 	content: url(/image/contactCTA/contactCTA-phone.svg);
 }
-.button {
+.contact-cta_button {
+	display: flex;
+	gap: 1.6rem;
 	padding: 2.6rem 4.8rem;
+	font-weight: bold;
 	font-size: var(--font-size-subtitle);
 }
-.contact-cta_deco {
-	position: absolute;
+.contact-cta_button:before {
+	content: url(/public/image/contactCTA/contactCTA-mail.svg);
 }
 .contact-cta_deco01 {
-	top: 2rem;
-	left: 15rem;
+	top: 1rem;
+	left: 16rem;
 }
 .contact-cta_deco02 {
 	bottom: 6rem;
@@ -713,9 +734,6 @@ Components
 }
 .footer .nav_link a:hover {
 	color: var(--color-accent);
-}
-.footer_deco > img {
-	position: absolute;
 }
 .footer_deco01 {
 	bottom: 5.6rem;
@@ -883,9 +901,6 @@ Components
 }
 .form_button-submit {
 	background: var(--color-accent);
-}
-.form_button-submit:hover {
-	opacity: 0.6;
 }
 .form_button-back {
 	border: 0.2rem solid var(--color-accent);

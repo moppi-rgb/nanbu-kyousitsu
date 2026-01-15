@@ -20,7 +20,7 @@ export default function ContactComplete({ onReset }: ContactCompleteProps) {
                     <button type="button" className="form_button form_button-back" onClick={onReset}>
                         続けてお問い合わせ
                     </button>
-                    <Link to="/" className="form_button form_button-submit">
+                    <Link to="/" className="button form_button form_button-submit">
                         トップページへ戻る
                     </Link>
                 </div>
