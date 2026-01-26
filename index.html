@@ -11,6 +11,21 @@
 </head>
 
 <body>
+	<!-- Netlify Forms用の隠しフォーム -->
+	<form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+		<input type="text" name="family_name" />
+		<input type="text" name="given_name" />
+		<input type="email" name="email" />
+		<input type="tel" name="tel" />
+		<input type="text" name="zipcode" />
+		<input type="text" name="address" />
+		<select name="subject">
+			<option value=""></option>
+		</select>
+		<textarea name="message"></textarea>
+		<input type="checkbox" name="agreement" />
+	</form>
+
 	<div id="root"></div>
 	<script type="module" src="/src/common/js/main.tsx"></script>
 </body>

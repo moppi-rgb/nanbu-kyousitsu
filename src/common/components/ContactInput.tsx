@@ -30,27 +30,6 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 
 	return (
 		<section className="contact">
-			{/* Netlify Forms用の隠しフォーム */}
-			<form
-				name="contact"
-				method="POST"
-				data-netlify="true"
-				data-netlify-honeypot="bot-field"
-				hidden
-			>
-				<input type="text" name="family_name" />
-				<input type="text" name="given_name" />
-				<input type="email" name="email" />
-				<input type="tel" name="tel" />
-				<input type="text" name="zipcode" />
-				<input type="text" name="address" />
-				<select name="subject">
-					<option value=""></option>
-				</select>
-				<textarea name="message"></textarea>
-				<input type="checkbox" name="agreement" />
-			</form>
-
 			<div className="contact_title-wrapper">
 				<h2 className="title contact_title">お問い合わせ</h2>
 				<p className="contact_title-text">
