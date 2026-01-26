@@ -24,9 +24,28 @@ export default function Contact() {
 		setCurrentStep("input");
 	};
 
-	const handleSubmit = (data: any) => {
-		console.log("送信するデータ:", data);
-		setCurrentStep("complete");
+	const handleSubmit = async (data: any) => {
+		try {
+			// Netlify Functionにデータを送信
+			const response = await fetch("/.netlify/functions/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (!response.ok) {
+				throw new Error("フォーム送信に失敗しました");
+			}
+
+			const result = await response.json();
+			console.log("送信成功:", result);
+			setCurrentStep("complete");
+		} catch (error) {
+			console.error("エラー:", error);
+			alert("フォーム送信中にエラーが発生しました");
+		}
 	};
 
 	const handleReset = () => {
