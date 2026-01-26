@@ -9,7 +9,7 @@ export default function Leading() {
 				viewport={{ once: true, amount: 0.5 }}
 				transition={{ delay: 0.5, duration: 1.2, ease: "easeOut" }}
 				className="leading_title-wrapper">
-				<h2 className="leading_title">子どもは遊びながら学んでいる</h2>
+				<h2 className="title leading_title">子どもは遊びながら学んでいる</h2>
 				<img src="/public/image/leading/leading-line.svg" alt="" className="leading_title-line" />
 			</motion.div>
 			<p className="leading_text">

@@ -8,7 +8,7 @@ export default function ContactComplete({ onReset }: ContactCompleteProps) {
     return (
         <section className="contact">
             <div className="contact_title-wrapper">
-                <h2 className="contact_title">お問い合わせ完了</h2>
+                <h2 className="title contact_title">お問い合わせ完了</h2>
             </div>
             <div className="form form_complete">
                 <div className="form_complete-wrapper">

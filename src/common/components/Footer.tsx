@@ -1,18 +1,25 @@
 import { Link } from "react-router-dom";
 
+const FooterLogo = () => {
+	return (
+		<picture className="footer_logo">
+			<source media="(max-width:820px)" srcSet="/public/image/common/logo_sp.svg" />
+			<img
+				src="/public/image/common/logo.svg"
+				alt="南部教室ロゴ"
+			/>
+		</picture>
+	);
+};
+
 export default function Footer() {
 	return (
 		<footer className="grid-center footer">
 			<div className="footer_wrapper">
 				<div className="footer_logo-wrapper">
-					<picture className="footer_logo">
-						<Link to="/">
-							<img src="/public/image/common/logo.svg" alt="" />
-						</Link>
-					</picture>
-					<p className="copyright">
-						© 2025 株式会社総合福祉サービス All Rights Reserved.
-					</p>
+					<Link to="/" onClick={() => window.scrollTo(0, 0)}>
+						<FooterLogo />
+					</Link>
 				</div>
 				<nav className="nav">
 					<ul className="nav_list">
@@ -93,6 +100,9 @@ export default function Footer() {
 					</ul>
 				</nav>
 			</div>
+			<p className="copyright">
+				© 2025 株式会社総合福祉サービス All Rights Reserved.
+			</p>
 			<div className="decorations footer_deco">
 				<img
 					src="/public/image/common/footer-deco01.svg"

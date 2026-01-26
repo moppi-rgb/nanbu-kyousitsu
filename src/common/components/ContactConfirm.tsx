@@ -36,7 +36,7 @@ export default function ContactConfirm({ onBack, onSubmit }: ContactConfirmProps
     return (
         <section className="contact">
             <div className="contact_title-wrapper">
-                <h2 ref={titleRef} className="contact_title">お問い合わせ内容の確認</h2>
+                <h2 ref={titleRef} className="title contact_title">お問い合わせ内容の確認</h2>
                 <p className="contact_title-text">
                     以下の内容でお間違いないかご確認ください。
                 </p>
@@ -86,7 +86,7 @@ export default function ContactConfirm({ onBack, onSubmit }: ContactConfirmProps
                     <button type="button" className="form_button form_button-back" onClick={onBack}>
                         入力内容を修正
                     </button>
-                    <button type="button" className="buttonform_button form_button-submit" onClick={handleFormSubmit}>
+                    <button type="button" className="form_button form_button-submit" onClick={handleFormSubmit}>
                         送信する
                     </button>
                 </div>

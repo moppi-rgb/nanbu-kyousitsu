@@ -4,7 +4,7 @@ export default function ContactCTA() {
 	return (
 		<section className="grid-center contact-cta">
 			<div className="contact-cta_wrapper">
-				<h2 className="sec-title contact-cta_title">お問い合わせ</h2>
+				<h2 className="title sec-title contact-cta_title">お問い合わせ</h2>
 				<div className="contact-cta_info">
 					<p className="contact-cta_text">
 						<Link to="tel:" className="contact-cta_phone">

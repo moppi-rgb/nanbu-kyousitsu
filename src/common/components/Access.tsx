@@ -1,7 +1,7 @@
 export default function Access() {
 	return (
 		<section className="grid-center access">
-			<h2 className="sec-title access_title">アクセス</h2>
+			<h2 className="title sec-title access_title">アクセス</h2>
 			<div className="access_wrapper">
 				<iframe
 					title="Googleマップ"

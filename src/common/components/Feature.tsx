@@ -4,7 +4,7 @@ export default function Feature() {
 	return (
 		<section className="grid-center feature">
 			<div className="feature_title-wrapper">
-				<h2 className="feature_title">
+				<h2 className="title feature_title">
 					子どもたちが思いのままに個性を発揮できる。
 					<br />
 					それが南部教室の特徴です。
@@ -14,32 +14,32 @@ export default function Feature() {
 				<img
 					src="/public/image/feature/feature_title-deco01.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco01"
+					className="feature_title-deco01"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco02.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco02"
+					className="feature_title-deco02"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco03.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco03"
+					className="feature_title-deco03"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco04.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco04"
+					className="feature_title-deco04"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco05.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco05"
+					className="feature_title-deco05"
 				/>
 				<img
 					src="/public/image/feature/feature_title-deco06.svg"
 					alt=""
-					className="feature_title-deco feature_title-deco06"
+					className="feature_title-deco06"
 				/>
 			</div>
 			<div className="feature_items">
@@ -70,16 +70,16 @@ export default function Feature() {
 					<div className="decorations feature_item-deco">
 						<img src="/public/image/feature/feature_item-deco01.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco01" />
+							className="feature_item-deco01" />
 						<img src="/public/image/feature/feature_item-deco02.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco02" />
+							className="feature_item-deco02" />
 						<img src="/public/image/feature/feature_item-deco03.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco03" />
+							className="feature_item-deco03" />
 						<img src="/public/image/feature/feature_item-deco04.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco04" />
+							className="feature_item-deco04" />
 					</div>
 				</div>
 				<div className="feature_item feature_item02">
@@ -109,7 +109,7 @@ export default function Feature() {
 					<div className="decorations feature_item-deco">
 						<img src="/public/image/feature/feature_item-deco05.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco05" />
+							className="feature_item-deco05" />
 					</div>
 				</div>
 				<div className="feature_item feature_item03">
@@ -140,23 +140,23 @@ export default function Feature() {
 					<div className="decorations feature_item-deco">
 						<img src="/public/image/feature/feature_item-deco07.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco07" />
+							className="feature_item-deco07" />
 						<img src="/public/image/feature/feature_item-deco08.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco08" />
+							className="feature_item-deco08" />
 						<img src="/public/image/feature/feature_item-deco09.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco09" />
+							className="feature_item-deco09" />
 						<img src="/public/image/feature/feature_item-deco10.svg"
 							alt=""
-							className="feature_item-deco feature_item-deco10" />
+							className="feature_item-deco10" />
 					</div>
 				</div>
 			</div>
 			<div className="decorations feature_item-deco">
 				<img src="/public/image/feature/feature_item-deco06.svg"
 					alt=""
-					className="feature_item-deco feature_item-deco06" />
+					className="feature_item-deco06" />
 			</div>
 		</section>
 	);

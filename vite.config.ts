@@ -10,5 +10,4 @@ export default defineConfig({
         outDir: 'dist',
         assetsDir: '',
     },
-    base: '/https:moppi-rgb.github.io/nanbu-kyousitsu/',
 });

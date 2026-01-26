@@ -24,14 +24,14 @@ export default function ContactInput({ onConfirm }: ContactInputProps) {
 		formState: { errors },
 	} = useFormContext<ContactFormData>();
 
-	const onSubmit = (data: ContactFormData) => {
+	const onSubmit = () => {
 		onConfirm();
 	};
 
 	return (
 		<section className="contact">
 			<div className="contact_title-wrapper">
-				<h2 className="contact_title">お問い合わせ</h2>
+				<h2 className="title contact_title">お問い合わせ</h2>
 				<p className="contact_title-text">
 					ご相談・ご見学・無料体験についてはこちらからお気軽にお問い合わせください。
 				</p>
