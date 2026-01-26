@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const FooterLogo = () => {
 	return (
 		<picture className="footer_logo">
-			<source media="(max-width:820px)" srcSet="/public/image/common/logo_sp.svg" />
+			<source media="(max-width:820px)" srcSet="/image/common/logo_sp.svg" />
 			<img
-				src="/public/image/common/logo.svg"
+				src="/image/common/logo.svg"
 				alt="南部教室ロゴ"
 			/>
 		</picture>

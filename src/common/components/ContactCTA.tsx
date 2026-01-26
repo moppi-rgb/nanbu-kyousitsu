@@ -19,15 +19,15 @@ export default function ContactCTA() {
 			</div>
 			<div className="decorations contact-cta_deco">
 				<img
-					src="/public/image/contactCTA/contactCTA-deco01.svg"
+					src="/image/contactCTA/contactCTA-deco01.svg"
 					alt=""
 					className="contact-cta_deco01" />
 				<img
-					src="/public/image/contactCTA/contactCTA-deco02.svg"
+					src="/image/contactCTA/contactCTA-deco02.svg"
 					alt=""
 					className="contact-cta_deco02" />
 				<img
-					src="/public/image/contactCTA/contactCTA-deco03.svg"
+					src="/image/contactCTA/contactCTA-deco03.svg"
 					alt=""
 					className="contact-cta_deco03" />
 			</div>

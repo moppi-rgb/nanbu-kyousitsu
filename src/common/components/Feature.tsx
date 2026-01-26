@@ -12,32 +12,32 @@ export default function Feature() {
 			</div>
 			<div className="decorations feature_title-deco">
 				<img
-					src="/public/image/feature/feature_title-deco01.svg"
+					src="/image/feature/feature_title-deco01.svg"
 					alt=""
 					className="feature_title-deco01"
 				/>
 				<img
-					src="/public/image/feature/feature_title-deco02.svg"
+					src="/image/feature/feature_title-deco02.svg"
 					alt=""
 					className="feature_title-deco02"
 				/>
 				<img
-					src="/public/image/feature/feature_title-deco03.svg"
+					src="/image/feature/feature_title-deco03.svg"
 					alt=""
 					className="feature_title-deco03"
 				/>
 				<img
-					src="/public/image/feature/feature_title-deco04.svg"
+					src="/image/feature/feature_title-deco04.svg"
 					alt=""
 					className="feature_title-deco04"
 				/>
 				<img
-					src="/public/image/feature/feature_title-deco05.svg"
+					src="/image/feature/feature_title-deco05.svg"
 					alt=""
 					className="feature_title-deco05"
 				/>
 				<img
-					src="/public/image/feature/feature_title-deco06.svg"
+					src="/image/feature/feature_title-deco06.svg"
 					alt=""
 					className="feature_title-deco06"
 				/>
@@ -51,8 +51,8 @@ export default function Feature() {
 							whileInView={{ opacity: 1, filter: "blur(0px)" }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-							src="/public/image/feature/feature-01.webp"
-							srcSet="/public/image/feature/feature-01.webp 1x, /public/image/feature/feature-01@2x.webp 2x"
+							src="/image/feature/feature-01.webp"
+							srcSet="/image/feature/feature-01.webp 1x, /image/feature/feature-01@2x.webp 2x"
 							alt="子どもたちがのびのび過ごせる空間"
 							className="feature_item-img feature_item-img01"
 						/>
@@ -68,16 +68,16 @@ export default function Feature() {
 						</p>
 					</div>
 					<div className="decorations feature_item-deco">
-						<img src="/public/image/feature/feature_item-deco01.svg"
+						<img src="/image/feature/feature_item-deco01.svg"
 							alt=""
 							className="feature_item-deco01" />
-						<img src="/public/image/feature/feature_item-deco02.svg"
+						<img src="/image/feature/feature_item-deco02.svg"
 							alt=""
 							className="feature_item-deco02" />
-						<img src="/public/image/feature/feature_item-deco03.svg"
+						<img src="/image/feature/feature_item-deco03.svg"
 							alt=""
 							className="feature_item-deco03" />
-						<img src="/public/image/feature/feature_item-deco04.svg"
+						<img src="/image/feature/feature_item-deco04.svg"
 							alt=""
 							className="feature_item-deco04" />
 					</div>
@@ -89,8 +89,8 @@ export default function Feature() {
 							whileInView={{ opacity: 1, filter: "blur(0px)" }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-							src="/public/image/feature/feature-02.webp"
-							srcSet="/public/image/feature/feature-02.webp 1x, /public/image/feature/feature-02@2x.webp 2x"
+							src="/image/feature/feature-02.webp"
+							srcSet="/image/feature/feature-02.webp 1x, /image/feature/feature-02@2x.webp 2x"
 							alt="ボウリングを楽しむ子どもたち"
 							className="feature_item-img feature_item-img02"
 						/>
@@ -107,7 +107,7 @@ export default function Feature() {
 						</p>
 					</div>
 					<div className="decorations feature_item-deco">
-						<img src="/public/image/feature/feature_item-deco05.svg"
+						<img src="/image/feature/feature_item-deco05.svg"
 							alt=""
 							className="feature_item-deco05" />
 					</div>
@@ -119,8 +119,8 @@ export default function Feature() {
 							whileInView={{ opacity: 1, filter: "blur(0px)" }}
 							viewport={{ once: true, amount: 0.5 }}
 							transition={{ delay: 0.2, duration: 1, ease: "easeOut" }}
-							src="/public/image/feature/feature-03.webp"
-							srcSet="/public/image/feature/feature-03.webp 1x, /public/image/feature/feature-03@2x.webp 2x"
+							src="/image/feature/feature-03.webp"
+							srcSet="/image/feature/feature-03.webp 1x, /image/feature/feature-03@2x.webp 2x"
 							alt="子どもたちの表現を応援します"
 							className="feature_item-img feature_item-img03"
 						/>
@@ -138,16 +138,16 @@ export default function Feature() {
 						</p>
 					</div>
 					<div className="decorations feature_item-deco">
-						<img src="/public/image/feature/feature_item-deco07.svg"
+						<img src="/image/feature/feature_item-deco07.svg"
 							alt=""
 							className="feature_item-deco07" />
-						<img src="/public/image/feature/feature_item-deco08.svg"
+						<img src="/image/feature/feature_item-deco08.svg"
 							alt=""
 							className="feature_item-deco08" />
-						<img src="/public/image/feature/feature_item-deco09.svg"
+						<img src="/image/feature/feature_item-deco09.svg"
 							alt=""
 							className="feature_item-deco09" />
-						<img src="/public/image/feature/feature_item-deco10.svg"
+						<img src="/image/feature/feature_item-deco10.svg"
 							alt=""
 							className="feature_item-deco10" />
 					</div>
