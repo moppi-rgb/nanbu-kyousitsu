@@ -26,21 +26,20 @@ export default function Contact() {
 
 	const handleSubmit = async (data: any) => {
 		try {
-			// Netlify Functionにデータを送信
+			// Netlify Formsにデータを送信
 			const response = await fetch("/.netlify/functions/contact", {
 				method: "POST",
 				headers: {
-					"Content-Type": "application/json",
+					"Content-Type": "application/x-www-form-urlencoded",
 				},
-				body: JSON.stringify(data),
+				body: new URLSearchParams(data).toString(),
 			});
 
 			if (!response.ok) {
 				throw new Error("フォーム送信に失敗しました");
 			}
 
-			const result = await response.json();
-			console.log("送信成功:", result);
+			console.log("フォーム送信成功");
 			setCurrentStep("complete");
 		} catch (error) {
 			console.error("エラー:", error);

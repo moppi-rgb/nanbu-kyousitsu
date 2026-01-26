@@ -4,84 +4,122 @@
 
 ## 📋 セットアップ済み項目
 
-- ✅ `netlify.toml` - ビルド・関数・リダイレクト設定
+- ✅ `netlify.toml` - ビルド・リダイレクト・Forms設定
 - ✅ `public/_redirects` - SPA用リダイレクト設定
-- ✅ `netlify/functions/contact.js` - フォーム処理用サーバーレス関数
-- ✅ `src/pages/Contact.tsx` - フォーム送信機能
+- ✅ `src/pages/Contact.tsx` - Netlify Forms対応
+- ✅ `netlify/functions/contact.js` - フォーム処理
 
 ## 🚀 デプロイ手順
 
-### 1. Netlify CLIをインストール（オプション）
+### 1. 環境変数をクリア（SendGrid設定を削除）
+
+**Netlify Dashboard** の **Environment variables** で、以下を削除してください：
+- ❌ `SENDGRID_API_KEY`
+- ❌ `SENDGRID_FROM_EMAIL`
+
+**`FORM_EMAIL` は残してください！** これはNetlify Formsの通知先アドレスになります。
+
+### 2. package.json を確認
+
 ```bash
-npm install -g netlify-cli
+npm install
 ```
 
-### 2. GitHubにコードをプッシュ
+`@sendgrid/mail` が削除されたことを確認できます。
+
+### 3. ビルド＆デプロイ
+
 ```bash
+npm run build
 git add .
-git commit -m "Add Netlify form support"
+git commit -m "Switch to Netlify Forms"
 git push
 ```
 
-### 3. Netlifyでサイトを作成・デプロイ
-- [Netlify Dashboard](https://app.netlify.com) にアクセス
-- 「Add new site」 → 「Import an existing project」
-- GitHubリポジトリを選択
-- ビルドコマンドが自動的に設定されます（`npm run build`）
-- 「Deploy」をクリック
+Netlifyの自動デプロイが開始されます。
 
-## 📧 フォーム設定（オプション：メール通知機能）
+---
 
-フォーム送信時にメール通知を受け取るには、環境変数を設定してください：
+## 📧 Netlify Forms とは？
 
-### Netlify Dashboard での設定手順
-1. Site settings → Environment
-2. 「Add a variable」をクリック
-3. 以下を追加：
+Netlify Formsは、複雑な設定なしでフォーム送信を処理してくれるサービスです：
 
-| キー | 値 | 説明 |
-|-----|-----|-----|
-| `FORM_EMAIL` | your-email@example.com | 送信先メールアドレス |
+- ✅ **フォーム自動処理**: HTMLの `netlify` 属性があれば自動的に処理
+- ✅ **自動メール通知**: `FORM_EMAIL` で指定したアドレスに通知
+- ✅ **スパム対策**: 自動的にスパムをフィルタリング
+- ✅ **ダッシュボード**: Netlifyで送信されたフォームを確認可能
+
+### Netlifyダッシュボードでフォーム確認方法
+1. **Site settings** → **Forms**
+2. サイトに送信されたすべてのフォームが表示されます
+3. 各フォーム送信の詳細が確認できます
+
+---
 
 ## 🧪 ローカルでのテスト
 
-### Netlify CLIでローカルテスト
+### 環境変数ファイルを作成
+`.env.local` ファイルをプロジェクトルートに作成：
+
+```env
+VITE_FORM_NAME=contact
+```
+
+### Netlify CLIでテスト
 ```bash
 netlify dev
 ```
+
 ブラウザで `http://localhost:8888` にアクセスしてテストできます。
 
-### フォーム送信のテスト
-1. `/contact` ページへ移動
-2. フォームに入力
-3. 送信ボタンをクリック
-4. 成功メッセージが表示されればOK
+フォーム送信後、Netlifyダッシュボードの **Forms** セクションで確認できます。
 
-## 📝 フォーム処理の仕組み
+---
 
-- **フロントエンド**: React Hook Form で入力フォームを管理
-- **バックエンド**: Netlify Functions で `/.netlify/functions/contact` にデータを送信
-- **処理**: `netlify/functions/contact.js` でバリデーションと処理を実行
+## 📝 フォーム送信の仕組み
 
-## 🔒 セキュリティに関する注意
+1. **フロント**: React Hook Form で入力フォームを管理
+2. **バックエンド**: Netlify Functions で受け取る
+3. **処理**: Netlify Forms が自動的にメール送信・記録
 
-- フォーム送信はサーバー側（Netlify Functions）で検証されています
+---
+
+## 🎯 次のステップ（オプション）
+
+### メール送信のカスタマイズ
+Netlify Formsの通知メールをカスタマイズしたい場合：
+- Netlify Dashboard → **Forms** → 「Notifications」で設定
+
+### リダイレクト設定
+フォーム送信後のリダイレクト先を設定：
+- `netlify.toml` の `[[forms]]` セクションで `redirect` を指定
+
+---
+
+## 🔒 セキュリティ
+
 - CORS設定がNetlifyで自動的に処理されます
-- 本番環境でメール送信を有効にする場合は、SendGrid等の外部サービスを統合してください
+- スパムフィルタが有効です
+- フォームデータはNetlifyで安全に保存されます
+
+---
 
 ## 📞 トラブルシューティング
 
 ### フォームが送信できない場合
-1. ブラウザのコンソール（F12）でエラーを確認
-2. Netlify Dashboard → Functions でログを確認
-3. 送信URL (`/.netlify/functions/contact`) が正しいか確認
+1. ブラウザの console（F12）でエラーを確認
+2. Netlify Dashboard → **Functions** でログを確認
+3. `netlify.toml` の設定を確認
 
-### メール送信が動作しない場合
-- `netlify/functions/contact.js` を編集してメール送信ロジックを実装してください
-- SendGrid、Postmark等のメールサービス連携が必要です
+### メール通知が来ない場合
+1. `FORM_EMAIL` 環境変数が設定されているか確認
+2. Netlify Dashboard → **Forms** で送信記録を確認
+3. スパムメールフォルダを確認
+
+---
 
 ## 📚 参考リンク
 
+- [Netlify Forms ドキュメント](https://docs.netlify.com/forms/setup/)
 - [Netlify Functions ドキュメント](https://docs.netlify.com/functions/overview/)
-- [Netlify Forms](https://docs.netlify.com/forms/setup/)
 - [React Hook Form](https://react-hook-form.com/)

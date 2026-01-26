@@ -21,3 +21,18 @@ status = 200
 [dev]
 functions = "netlify/functions"
 port = 8888
+# Netlify Forms 設定
+[forms]
+  from_email = "contact@example.com"
+  fields = [
+    { name = "family_name", required = true },
+    { name = "given_name", required = true },
+    { name = "email", type = "email", required = true },
+    { name = "tel" },
+    { name = "zipcode" },
+    { name = "address" },
+    { name = "subject", required = true },
+    { name = "message", required = true },
+    { name = "agreement", type = "checkbox", required = true }
+  ]
+  spam_filter = { enabled = true, action = "block" }
