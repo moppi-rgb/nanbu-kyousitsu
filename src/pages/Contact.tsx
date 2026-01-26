@@ -27,18 +27,24 @@ export default function Contact() {
 	const handleSubmit = async (data: any) => {
 		try {
 			// Netlify Formsにデータを送信
-			const formData = new FormData();
+			const formData = new URLSearchParams();
 			formData.append("form-name", "contact");
 
 			// フォームデータを追加
 			Object.keys(data).forEach(key => {
-				formData.append(key, data[key]);
+				const value = data[key];
+				// チェックボックスの場合は"on"または"off"に変換
+				if (typeof value === "boolean") {
+					formData.append(key, value ? "on" : "off");
+				} else {
+					formData.append(key, value || "");
+				}
 			});
 
 			const response = await fetch("/", {
 				method: "POST",
 				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: new URLSearchParams(formData as any).toString(),
+				body: formData.toString(),
 			});
 
 			if (!response.ok) {
