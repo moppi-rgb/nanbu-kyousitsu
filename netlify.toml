@@ -1,7 +1,6 @@
 [build]
 command = "npm run build"
 publish = "dist"
-functions = "netlify/functions"
 
 [[redirects]]
 from = "/*"
@@ -11,16 +10,10 @@ status = 200
 [build.environment]
 NODE_VERSION = "20"
 
-# Netlify Functions のリダイレクト
-[[redirects]]
-from = "/.netlify/functions/:name"
-to = "/.netlify/functions/:name"
-status = 200
-
 # ローカル開発用の設定
 [dev]
-functions = "netlify/functions"
 port = 8888
+
 # Netlify Forms 設定
 [forms]
   from_email = "contact@example.com"
