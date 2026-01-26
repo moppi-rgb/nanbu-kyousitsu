@@ -27,12 +27,18 @@ export default function Contact() {
 	const handleSubmit = async (data: any) => {
 		try {
 			// Netlify Formsにデータを送信
-			const response = await fetch("/.netlify/functions/contact", {
+			const formData = new FormData();
+			formData.append("form-name", "contact");
+
+			// フォームデータを追加
+			Object.keys(data).forEach(key => {
+				formData.append(key, data[key]);
+			});
+
+			const response = await fetch("/", {
 				method: "POST",
-				headers: {
-					"Content-Type": "application/x-www-form-urlencoded",
-				},
-				body: new URLSearchParams(data).toString(),
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: new URLSearchParams(formData as any).toString(),
 			});
 
 			if (!response.ok) {
