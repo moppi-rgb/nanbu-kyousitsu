@@ -9,5 +9,14 @@ export default defineConfig({
     build: {
         outDir: 'dist',
         assetsDir: '',
+        minify: 'terser',
+        terserOptions: {
+            compress: {
+                drop_console: true,
+                drop_debugger: true,
+                unused: true,
+            },
+            mangle: true,
+        },
     },
 });
