@@ -25,46 +25,9 @@ export default function Contact() {
 	};
 
 	const handleSubmit = async (data: any) => {
-		try {
-			// Netlify Formsにデータを送信
-			const formData = new URLSearchParams();
-			formData.append("form-name", "contact");
-
-			// フォームデータを追加
-			Object.keys(data).forEach(key => {
-				const value = data[key];
-				// チェックボックスの場合は"on"または"off"に変換
-				if (typeof value === "boolean") {
-					formData.append(key, value ? "on" : "off");
-				} else {
-					formData.append(key, value || "");
-				}
-			});
-
-			const response = await fetch("/", {
-				method: "POST",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: formData.toString(),
-			});
-
-			// Netlify Forms は 200-299 または 3xx のレスポンスを返すことがある
-			// リダイレクトやエラーページへの遷移も成功とみなす
-			if (response.status >= 200 && response.status < 400) {
-				console.log("フォーム送信成功");
-				setCurrentStep("complete");
-			} else {
-				throw new Error("フォーム送信に失敗しました");
-			}
-		} catch (error) {
-			console.error("エラー:", error);
-			// ネットワークエラーでない場合は成功とみなす（Netlifyのリダイレクトの可能性）
-			if (error instanceof TypeError) {
-				console.log("フォーム送信完了（リダイレクト）");
-				setCurrentStep("complete");
-			} else {
-				alert("フォーム送信中にエラーが発生しました");
-			}
-		}
+		// テスト完了のため送信機能は無効化
+		console.log("送信機能は現在無効です");
+		alert("申し訳ありません。現在、お問い合わせフォームはメンテナンス中です。");
 	};
 
 	const handleReset = () => {
